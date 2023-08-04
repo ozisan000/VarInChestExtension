@@ -14,7 +14,7 @@ enum MyEnum {
 /**
  * Custom blocks
  */
-//% weight=100 color=#0fbc11 icon="🎁"
+//% weight=100 color=#0fbc11 icon="C"
 namespace Number {
     // =========================
     // 1:VariableInChest Code
