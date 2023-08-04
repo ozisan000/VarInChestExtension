@@ -1,10 +1,14 @@
-## Step 1
+### VarInChest拡張機能
+指定した座標にあるチェストに特定のアイテムを設定した数値分格納します。
+（教材用に作成したもののためすべてのテストケースの確認ができていません）
 
-Instructions for step 1 here...
+# 使用例
+'''python
+#返り値には10進数の値が返ってくるが指定した座標にチェストが出現し、
+#0スロット目に64,1スロット目に5個のダイヤモンドが格納される
+num = Number.var_in_chest("diamond", 69, 0, 0, 0)
+'''
 
-## Step 2
-
-Instructions for step 2 here...
 
 
 > このページを開く [https://ozisan000.github.io/varinchestextension/](https://ozisan000.github.io/varinchestextension/)
