@@ -19,7 +19,7 @@
         "branch": "v1.7.7",
         "tag": "v1.7.7",
         "commits": "https://github.com/microsoft/pxt-minecraft/commits/1391a35e2add310215312cbe34ad621fa79887f6",
-        "target": "1.7.8",
+        "target": "1.7.21",
         "pxt": "8.6.35",
         "targetId": "minecraft"
     },

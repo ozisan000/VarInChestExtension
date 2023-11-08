@@ -4,13 +4,6 @@
 * 詳しくはこちらを参照してください：https://minecraft.makecode.com/blocks/custom
 */
 
-enum MyEnum {
-    //% block="one"
-    One,
-    //% block="two"
-    Two
-}
-
 /**
  * Custom blocks
  */
@@ -24,14 +17,14 @@ namespace Number {
      * @param cal describe parameter here, eg: 128
      */
     //% block
-    export function Base10toNumber(cal: number, base: number): number[] {
+    function Base10toNumber(cal: number, base: number): number[] {
         let calList = []
         // ビットが出力される配列
         let bufferList = []
-        player.say(" ")
-        player.say("---Base10to" + base + " Start---")
+        //player.say(" ")
+        //player.say("---Base10to" + base + " Start---")
         while (cal >= 1) {
-            player.say("number:" + cal % base + " cal:" + cal / base)
+            //player.say("number:" + cal % base + " cal:" + cal / base)
             bufferList.push(cal % base)
             cal = Math.floor(cal / base)
         }
@@ -42,10 +35,10 @@ namespace Number {
             calList[j] = i
             j += 1
         }
-        player.say("--Base10to" + base + " result--")
-        player.say(calList)
-        player.say("--Base10to" + base + " End--")
-        player.say(" ")
+        //player.say("--Base10to" + base + " result--")
+        //player.say(calList)
+        //player.say("--Base10to" + base + " End--")
+        //player.say(" ")
         return calList
     }
 
@@ -55,7 +48,7 @@ namespace Number {
      * @param item_name describe parameter here, eg: "diamond"
      */
     //% block
-    export function SetItemInChest(item_name: string, slot: number, item_count: number, chest_pos_x: number, chest_pos_y: number, chest_pos_z: number) {
+    function SetItemInChest(item_name: string, slot: number, item_count: number, chest_pos_x: number, chest_pos_y: number, chest_pos_z: number) {
         player.execute("replaceitem block " + chest_pos_x + " " + chest_pos_y + " " + chest_pos_z + " slot.container " + slot + " " + item_name + " " + item_count)
     }
 
@@ -73,7 +66,7 @@ namespace Number {
         let endPos: Position;
         let conversionList: number[];
         let i: number;
-        if (result <= 1728) {
+        if ( 0 < result && result <= 1728) {
             // 特定の値を初期化（チェストを消して中身をマグマで消去）
             chestPos = world(chest_pos_x, chest_pos_y, chest_pos_z)
             startPos = world(chest_pos_x - 1, chest_pos_y, chest_pos_z + 1)
